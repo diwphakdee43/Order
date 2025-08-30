@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จัดการสินค้า - ระบบจัดการออเดอร์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>จัดการสินค้า</h1>
+        <nav>
+            <a href="index.html">หน้าหลัก</a>
+            <a href="add-order.html">เพิ่มออเดอร์</a>
+            <a href="products.html" class="active">จัดการสินค้า</a>
+        </nav>
+    </header>
+    <main>
+        <div class="card">
+            <h2>เพิ่มสินค้าใหม่</h2>
+            <form id="product-form">
+                <input type="text" id="productName" placeholder="ชื่อสินค้า" required>
+                <input type="number" id="productPrice" placeholder="ราคา" min="0" step="any" required>
+                <button type="submit">เพิ่มสินค้า</button>
+            </form>
+        </div>
+        <div class="card">
+            <h2>รายการสินค้าทั้งหมด</h2>
+            <div id="product-list"></div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/dexie@3/dist/dexie.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

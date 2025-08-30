@@ -1,0 +1,63 @@
+/* General Styles */
+body { font-family: sans-serif; margin: 0; background-color: #f4f7f6; color: #333; }
+main { padding: 1rem; max-width: 800px; margin: auto; }
+.card { background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
+
+/* Header and Navigation */
+header { background-color: #4A90E2; color: white; padding: 1rem; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+nav { display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem; }
+nav a { color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 4px; transition: background-color 0.2s; }
+nav a:hover { background-color: rgba(255,255,255,0.2); }
+nav a.active { background-color: rgba(255,255,255,0.3); font-weight: bold; }
+
+/* Forms */
+input, textarea, button, select { width: 100%; padding: 0.8rem; margin-bottom: 0.8rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+button { background-color: #4A90E2; color: white; border: none; cursor: pointer; transition: background-color 0.2s; }
+button:hover { background-color: #357ABD; }
+.submit-order-btn { background-color: #50E3C2; }
+.submit-order-btn:hover { background-color: #3bb59b; }
+
+/* Calendar */
+#calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+#calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; text-align: center; }
+.calendar-day-name { font-weight: bold; }
+.calendar-day { padding: 0.5rem; border-radius: 4px; }
+.calendar-day.other-month { color: #ccc; }
+.calendar-day.has-delivery { background-color: #ffc107; color: white; font-weight: bold; }
+
+/* Other styles from previous answer */
+.product-item { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; border-bottom: 1px solid #eee; }
+.delete-btn { background-color: #D0021B; padding: 0.4rem 0.8rem; width: auto; font-size: 0.8rem; }
+.add-item-section { 
+    display: flex; 
+    flex-direction: column; /* เปลี่ยนเป็นแนวตั้งสำหรับมือถือ */
+    gap: 0.5rem; 
+}
+
+/* เพิ่ม responsive design สำหรับ add-item-section */
+@media (min-width: 600px) {
+    .add-item-section {
+        flex-direction: row; /* กลับไปเป็นแนวนอนบนหน้าจอที่ใหญ่ขึ้น */
+    }
+}
+
+.summary h3 { color: #4A90E2; }
+.other-costs { display: flex; align-items: center; gap: 1rem; }
+.order-item { border: 1px solid #eee; padding: 1rem; border-radius: 4px; margin-bottom: 1rem; }
+.order-item.completed { border-left: 5px solid #50E3C2; background-color: #f0fff0; }
+.order-item-header { 
+    display: flex; 
+    flex-direction: column; /* จัดให้เนื้อหาเรียงลงมา */
+    align-items: flex-start; 
+    gap: 0.5rem; /* เพิ่มระยะห่างระหว่างรายการ */
+}
+
+/* เพิ่ม responsive design สำหรับ order-item-header */
+@media (min-width: 600px) {
+    .order-item-header {
+        flex-direction: row; /* กลับไปเป็นแนวนอนบนหน้าจอที่ใหญ่ขึ้น */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+.order-item-details ul { list-style: none; padding-left: 1rem; }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพิ่มออเดอร์ - ระบบจัดการออเดอร์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>สร้างออเดอร์ใหม่</h1>
+        <nav>
+            <a href="index.html">หน้าหลัก</a>
+            <a href="add-order.html" class="active">เพิ่มออเดอร์</a>
+            <a href="products.html">จัดการสินค้า</a>
+        </nav>
+    </header>
+    <main>
+        <div class="card">
+            <form id="order-form">
+                <input type="text" id="customerInfo" placeholder="ข้อมูลลูกค้า" required>
+                <textarea id="address" placeholder="ที่อยู่จัดส่ง" required></textarea>
+                <input type="date" id="deliveryDate" required>
+                
+                <div class="add-item-section">
+                    <select id="product-select"></select>
+                    <input type="number" id="quantity" placeholder="จำนวน" value="1" min="1">
+                    <button type="button" id="add-item-btn">เพิ่มรายการ</button>
+                </div>
+
+                <h3>รายการในออเดอร์นี้</h3>
+                <div id="current-order-items"></div>
+
+                <div class="summary">
+                    <p>ราคาสินค้ารวม: <span id="subtotal">0</span> บาท</p>
+                    <div class="other-costs">
+                        <label for="otherCosts">ค่าใช้จ่ายอื่น (ค่าส่ง/ทิป):</label>
+                        <input type="number" id="otherCosts" value="0" min="0">
+                    </div>
+                    <h3>ยอดรวมสุทธิ: <span id="total-amount">0</span> บาท</h3>
+                </div>
+                <button type="submit" class="submit-order-btn">บันทึกออเดอร์</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/dexie@3/dist/dexie.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/add-order.js"></script>
+</body>
+</html>

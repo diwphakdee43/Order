@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก - ระบบจัดการออเดอร์</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <h1>ภาพรวมออเดอร์</h1>
+        <nav>
+            <a href="index.html" class="active">หน้าหลัก</a>
+            <a href="add-order.html">เพิ่มออเดอร์</a>
+            <a href="products.html">จัดการสินค้า</a>
+        </nav>
+    </header>
+    <main>
+        <div class="card">
+            <h2>ปฏิทินจัดส่ง</h2>
+            <div id="calendar-header">
+                <button id="prev-month-btn">&lt;</button>
+                <h3 id="month-year-display"></h3>
+                <button id="next-month-btn">&gt;</button>
+            </div>
+            <div id="calendar"></div>
+        </div>
+
+        <div class="card">
+            <h2>รายการออเดอร์ทั้งหมด</h2>
+            <div id="order-list"></div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/dexie@3/dist/dexie.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

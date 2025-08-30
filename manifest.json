@@ -1,0 +1,26 @@
+{
+    "name": "Offline Order Manager",
+    "short_name": "OrderApp",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4A90E2",
+    "description": "An offline-first order management web application.",
+    "icons": [
+        {
+            "src": "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_96dp.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_192dp.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
